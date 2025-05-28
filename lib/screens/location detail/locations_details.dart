@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tourism/assets/assets.dart';
-import 'package:tourism/screens/home/image_banner.dart';
-import 'package:tourism/screens/home/text_section.dart';
+import 'package:tourism/screens/location%20detail/image_banner.dart';
+import 'package:tourism/screens/location%20detail/text_section.dart';
 
 class LocationDetails extends StatelessWidget {
   const LocationDetails({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tourism/assets/style.dart';
-import 'package:tourism/screens/home/locations_details.dart';
+import 'package:tourism/screens/location%20detail/locations_details.dart';
 
 void main() {
   runApp(const MyApp());
