@@ -15,7 +15,7 @@ class LocationPage extends StatelessWidget{
       body: ListView(
         children: locations.map((e) => Text(e.name)).toList()
       )
-    
+    //testing a commit
 
     );
   }
