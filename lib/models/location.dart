@@ -7,7 +7,7 @@ class Location {
   Location(this.id, this.name, this.imagePath, this.locationFact);
 
   // this function will fetch the name imagepath & location fact
-  static fetchAll() {
+  static List<Location> fetchAll() {
 
     List<Location> location = [];
 
@@ -15,7 +15,7 @@ class Location {
     location.add(Location(1, 'title2','body2','fact2'));
     location.add(Location(1, 'title3','body3','fact3'));
     
-
+    return location;
 
   }
 

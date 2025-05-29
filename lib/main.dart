@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tourism/assets/style.dart';
+import 'package:tourism/models/location.dart';
 import 'package:tourism/screens/location%20detail/locations_details.dart';
+import 'package:tourism/screens/location/locations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
         ),
         
       ),
-      home:  LocationDetails()
+      home:  LocationPage()
     );
   }
 }

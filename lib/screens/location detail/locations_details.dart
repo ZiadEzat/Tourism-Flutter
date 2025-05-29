@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tourism/assets/assets.dart';
+import 'package:tourism/models/location.dart';
 import 'package:tourism/screens/location%20detail/image_banner.dart';
 import 'package:tourism/screens/location%20detail/text_section.dart';
 
 class LocationDetails extends StatelessWidget {
-  const LocationDetails({super.key});
   
+  // const LocationDetails({super.key});
+  
+    final List<Location> _location = Location.fetchAll();
 
   @override
   Widget build(BuildContext context) {
@@ -24,12 +27,12 @@ class LocationDetails extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           ImageBanner(imageAssets[0]),
-          TextSection("Pyramids", "I'm a text that is about to be replaced so beware of the text changer"),
-          TextSection("Khofo", "I'm a text that is about to be replaced so beware of the text changer"),
-          TextSection("Khafra", "I'm a text that is about to be replaced so beware of the text changer"),
-        ],     
-      ),
-
-    );
+        ]..addAll(TextSections(_location))),     
+      );
+    ;
   }
+
+  List<Widget> TextSections(List<Location> loc) {
+    return loc.map((e) => TextSection(e.name, e.locationFact)).toList();
+}
 }
